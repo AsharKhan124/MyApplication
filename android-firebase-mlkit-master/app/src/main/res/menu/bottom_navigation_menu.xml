@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/ic_house"
+        android:icon="@drawable/ic_house"
+        android:title=""
+        app:showAsAction="always"
+        android:enabled="true">
+    </item>
+
+
+    <item
+        android:id="@+id/ic_chat"
+        android:icon="@drawable/ic_chat"
+        android:title=""
+        app:showAsAction="always"
+        android:enabled="true">
+    </item>
+
+    <item
+        android:id="@+id/ic_camera"
+        android:icon="@drawable/ic_camera"
+        android:enabled="true"
+        android:title=""
+        app:showAsAction="always">
+    </item>
+
+    <item
+        android:id="@+id/ic_product"
+        android:icon="@drawable/ic_product"
+        android:title=""
+        android:enabled="true"
+        app:showAsAction="always">
+    </item>
+
+    <item
+        android:id="@+id/ic_personal_profile"
+        android:icon="@drawable/ic_personal_profile"
+        android:title=""
+        app:showAsAction="always"
+        android:enabled="true">
+    </item>
+</menu>

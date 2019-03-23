@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecommendedProductsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/actionBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/main_page_toolbar"
+            layout="@layout/app_bar_toolbar" />
+
+        <!-- style="@style/ThemeOverlay.AppCompat.Dark.ActionBar" -->
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/main_tabs"
+            style="@style/MyTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff8383"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            app:tabIndicatorFullWidth="true"
+            app:tabIndicatorColor="#4DDBFF">
+
+        </android.support.design.widget.TabLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_tabs_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actionBarLayout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatingbutton_bucket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:src="@drawable/ic_bucket"
+            />
+
+
+
+    </android.support.v4.view.ViewPager>
+
+        <!--<android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatingbutton_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="60dp"
+            android:clickable="true"
+            android:src="@drawable/ic_bucket" />-->
+
+
+
+
+    <!-- Bottom Navigation -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+            android:id="@+id/bottomNavViewBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ff8383"
+            app:menu="@menu/bottom_navigation_menu">
+
+
+        </com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx>
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

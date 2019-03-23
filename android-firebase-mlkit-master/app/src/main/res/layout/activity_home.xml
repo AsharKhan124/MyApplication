@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!-- top toolbar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayout1">
+
+            <include layout="@layout/app_bar_toolbar"
+                android:id="@+id/all_users_app_bar">
+            </include>
+
+        </RelativeLayout>
+
+        <!-- Middle Section -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/relLayout2"
+            android:layout_below="@id/relLayout1">
+
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:background="@color/pink"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/logo"
+                        android:layout_centerHorizontal="true"
+                        android:elevation="1dp"
+                        android:id="@+id/userimage"
+                        app:civ_border_color="@color/White"
+                        app:civ_border_width="2dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/userimage">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            app:contentPaddingTop="15dp"
+                            app:contentPaddingRight="15dp"
+                            app:contentPaddingLeft="15dp"
+                            app:contentPaddingBottom="15dp"
+                            app:cardCornerRadius="10dp">
+
+                           <!-- <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ashar Ali Khan"
+                                    android:textStyle="bold"
+                                    android:textSize="25sp"
+                                    android:layout_gravity="center"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Full Stack developer, Android, UI"
+                                    android:textSize="17sp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="lorem ipsum lorem ipsum"
+                                    android:textAlignment="center"
+                                    android:layout_gravity="center"
+                                    android:textSize="18sp"
+                                    android:layout_marginTop="10dp"
+                                    android:textStyle="italic"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="New York, USA"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_gravity="center"/>
+
+                            </LinearLayout>-->
+
+                            <LinearLayout
+                                android:id="@+id/layout1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                android:layout_marginTop="20dp">
+
+                                <LinearLayout
+                                    android:layout_width="62dp"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center_horizontal"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="Overall Skin Score"
+                                        android:textSize="10sp"
+                                        android:textColor="@color/black"
+                                        />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:layout_weight="1"
+                                            android:layout_gravity="center_horizontal"
+                                            >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="80"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:textSize="25sp"
+                                        />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_horizontal"
+                                                android:text="out of 100"
+                                                android:textColor="@color/black"
+                                                android:textSize="10sp" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="62dp"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center_horizontal"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="Skin Age Today"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold"
+                                        android:textSize="10sp"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="36 years"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:textSize="25sp"
+                                        />
+
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="80dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Results Remarks"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp"
+                                    />
+
+
+                                <Button
+                                    android:layout_width="125dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:text="View Report"
+                                    android:background="@drawable/element_outline"
+                                    />
+
+
+
+
+                            </LinearLayout>
+
+
+
+
+
+
+
+                        </android.support.v7.widget.CardView>
+
+                       <!-- <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:layout_marginTop="20dp">
+
+                            <LinearLayout
+                                android:layout_width="62dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_gravity="center_horizontal"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="9.8"
+                                    android:textStyle="bold"
+                                    android:textSize="35sp"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="rating"
+                                    android:textSize="20sp"
+                                    />
+
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="62dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_gravity="center_horizontal"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="9.8"
+                                    android:textStyle="bold"
+                                    android:textSize="35sp"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="rating"
+                                    android:textSize="20sp"
+                                    />
+
+
+
+                            </LinearLayout>
+                        </LinearLayout>-->
+
+
+                      <!--  <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:layout_marginTop="10dp">
+
+                            <Button
+                                android:layout_width="125dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:text="Portfolio"
+                                android:background="@drawable/element_outline"
+                                />
+
+                            <Button
+                                android:layout_width="125dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:text="Hire Me"
+                                android:background="@drawable/element_outline"
+                                />
+
+
+                        </LinearLayout>-->
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </RelativeLayout>
+
+        <!-- Bottom Navigation -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true">
+
+            <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/bottomNavViewBar"
+                android:background="#ff8383"
+                app:menu="@menu/bottom_navigation_menu">
+
+
+            </com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.google.firebase.samples.apps.mlkit">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/mlkit"
+        android:label="@string/app_name"
+        android:theme="@style/MaterialTheme">
+        <activity android:name=".EditProfileActivity"></activity>
+        <activity android:name=".UserProfileActivity" />
+        <activity android:name=".RecommendedProductsActivity" />
+        <activity android:name=".CareCenterActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".AdminActivity" />
+        <activity android:name=".Dashboard" />
+        <activity
+            android:name=".WelomeActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LivePreviewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".StillImageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BucketActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".PreFillActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".WrinklesProductActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".PoursProductActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".PigmentationProductActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".PimpleProductActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".AddProductActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ChatActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:parentActivityName=".StarterPageActivity" />
+        <activity
+            android:name=".RegisterActivity"
+            android:parentActivityName=".StarterPageActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".AllUsersActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".ChooserActivity" />
+    </application>
+
+</manifest>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fireTopLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:keepScreenOn="true">
+
+    <com.google.firebase.samples.apps.mlkit.CameraSourcePreview
+        android:id="@+id/firePreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp">
+
+        <ImageView
+            android:id="@+id/facemask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:srcCompat="@drawable/trysec" />
+
+        <com.google.firebase.samples.apps.mlkit.GraphicOverlay
+            android:id="@+id/fireFaceOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.google.firebase.samples.apps.mlkit.CameraSourcePreview>
+
+    <ToggleButton
+        android:id="@+id/facingswitch"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="start"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="43dp"
+        android:background="#ffffff"
+        android:checked="false"
+        android:textOff=""
+        android:textOn=""
+        android:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="TODO"
+        android:background="@null"
+        android:src="@drawable/camera"
+
+         />
+
+    <!-- Bottom Navigation -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/bottomNavViewBar"
+            android:background="#ff8383"
+            app:menu="@menu/bottom_navigation_menu">
+
+
+        </com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx>
+    </RelativeLayout>
+
+</RelativeLayout>
